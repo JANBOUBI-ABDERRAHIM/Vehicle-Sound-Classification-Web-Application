@@ -1,0 +1,46 @@
+<html>
+<link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='styles/results.css')}}">
+<title>Results</title>
+  <div class="center-screen">
+    <div class="title">
+      <h1>Results </h1>
+    </div>
+    <div class="text">
+      <p> The prediction for the file "{{filename}}" is a : </p>
+    <div class="items">
+        {% if prediction_to_render=="Airplane" %}
+        <h2 style="text-align: center;">Airplane</h2>
+        <img class="center" src={{ url_for('static', filename='images/Airplane.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Train" %}
+        <h2 style="text-align: center;">Train</h2>
+        <img class="center" src={{ url_for('static', filename='images/Train.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Motocycles" %}
+        <h2 style="text-align: center;">Motobic</h2>
+        <img class="center" src={{ url_for('static', filename='images/Motobic.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="bus" %}
+        <h2 style="text-align: center;">Bus</h2>
+        <img class="center" src={{ url_for('static', filename='images/Bus.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Bics" %}
+        <h2 style="text-align: center;">Bicycle</h2>
+        <img class="center" src={{ url_for('static', filename='images/Bic.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Helicopter" %}
+        <h2 style="text-align: center;">Helicopter</h2>
+        <img class="center" src={{ url_for('static', filename='images/Helicopter.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Cars" %}
+        <h2 style="text-align: center;">Car</h2>
+        <img class="center" src={{ url_for('static', filename='images/Car.jpg') }}/>
+        {% endif %}
+        {% if prediction_to_render=="Truck" %}
+        <h2 style="text-align: center;">Truck</h2>
+        <img class="center" src={{ url_for('static', filename='images/Truck.jpg') }}/>
+        {% endif %}
+    </div>
+    </div>
+  </div>
+</html>
